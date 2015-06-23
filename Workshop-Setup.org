@@ -1,0 +1,53 @@
+* TODOs ( Week of <2015-06-22 Mon>)
+
+** DONE Setup vagrant-mesos w/ Leiningen and hello-mesos
+** DONE Setup RENDLER on virtualbox
+** DONE Setup hello-mesos on virtualbox
+** DONE Call REPL and spin an executor
+** TODO Read and review Mesos blog post about history (http://www.umbrant.com/blog/2015/mesos_omega_borg_survey.html)
+** TODO Make first draft of slides
+
+* TODOs ( Week of <2015-06-29 Mon>)
+
+** TODO Setup Ubuntu 14.04 on Appleseed
+
+
+* <2015-06-22 Mon 21:06> Work Log (Prasanna)
+
+** Installing vagrant-mesos
+
+https://github.com/everpeace/vagrant-mesos
+
+- Using the standalone version
+
+Other options:
+
+- Ed is using this and it uses Packer. I don't feel like learning packer again at the moment, hence the easy fork.
+https://github.com/zooniverse/cloudformation-mesos/blob/master/packer/ubuntu-14.04-mesos.json
+
+** Running hello-mesos
+
+*** If you try to run in a fresh box
+
+Caused by: java.lang.UnsatisfiedLinkError: no mesos in java.library.path, compiling:(clj_mesos/scheduler.clj:19:4)
+
+- Idea is to just run in the VM directly instead of dealing with users getting confused how to run this.
+
+*** Vagrant Setup
+
+
+Forked https://github.com/clj-mesos-workshop/vagrant-mesos
+
+
+#+BEGIN_SRC
+cd standalone
+vagrant up
+#+END_SRC
+
+This will download and setup the following on top of the original vagrant-mesos repo
+
+- leiningen on /usr/bin/lein
+- Projects hello-mesos and RENDLER in /home/vagrant/mesos-workshop directory.
+
+**** TODO Remove extra dependencies.
+**** TODO Use packer to build one or reuse Mesosphere's
