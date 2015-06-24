@@ -1,4 +1,4 @@
-#+TODO: TODO IN-PROGRESS WAITING ERROR DONE
+#+TODO: TODO REMINDER ERROR DONE
 
 * TODOs ( Week of <2015-06-22 Mon>)
 
@@ -56,6 +56,9 @@ This will download and setup the following on top of the original vagrant-mesos 
 
 
 * <2015-06-23 Tue 23:55> Work Log (Prasanna)
+** REMINDER Synced Folder
+config.vm.synced_folder "/Users/pgautam/work/mesos/hello-mesos", "/vagrant/hello-mesos"
+
 ** Running a REPL for easy access
 
 Options:
