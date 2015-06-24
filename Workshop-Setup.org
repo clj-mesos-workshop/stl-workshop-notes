@@ -1,3 +1,5 @@
+#+TODO: TODO IN-PROGRESS WAITING ERROR DONE
+
 * TODOs ( Week of <2015-06-22 Mon>)
 
 ** DONE Setup vagrant-mesos w/ Leiningen and hello-mesos
@@ -7,10 +9,8 @@
 ** TODO Read and review Mesos blog post about history (http://www.umbrant.com/blog/2015/mesos_omega_borg_survey.html)
 ** TODO Make first draft of slides
 
-* TODOs ( Week of <2015-06-29 Mon>)
-
-** TODO Setup Ubuntu 14.04 on Appleseed
-
+** TODO Figure out the REPL situation
+** TODO Figure out the Editor situation
 
 * <2015-06-22 Mon 21:06> Work Log (Prasanna)
 
@@ -27,7 +27,9 @@ https://github.com/zooniverse/cloudformation-mesos/blob/master/packer/ubuntu-14.
 
 ** Running hello-mesos
 
-*** If you try to run in a fresh box
+*** ERROR If you try to run in a fresh box
+
+
 
 Caused by: java.lang.UnsatisfiedLinkError: no mesos in java.library.path, compiling:(clj_mesos/scheduler.clj:19:4)
 
@@ -51,3 +53,31 @@ This will download and setup the following on top of the original vagrant-mesos 
 
 **** TODO Remove extra dependencies.
 **** TODO Use packer to build one or reuse Mesosphere's
+
+
+* <2015-06-23 Tue 23:55> Work Log (Prasanna)
+** Running a REPL for easy access
+
+Options:
+
+*** Run from the vagrant shell itself
+
+#+BEGIN_SRC shell
+lein repl :headless :host 0.0.0.0 :port 8090
+#+END_SRC
+
+Pros:
+
+- No need to add any extra stuff into code
+
+Cons:
+
+- It's an extra step for the attendee to do that could be avoided
+
+*** Embed nrepl in the scheduler itself
+
+I have the code for embedding in the
+
+* TODOs ( Week of <2015-06-29 Mon>)
+
+** TODO Setup Ubuntu 14.04 on Appleseed
