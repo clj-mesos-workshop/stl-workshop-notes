@@ -6,11 +6,11 @@
 ** DONE Setup RENDLER on virtualbox
 ** DONE Setup hello-mesos on virtualbox
 ** DONE Call REPL and spin an executor
+** DONE Figure out the REPL situation
+** DONE Figure out the Editor situation
+
 ** TODO Read and review Mesos blog post about history (http://www.umbrant.com/blog/2015/mesos_omega_borg_survey.html)
 ** TODO Make first draft of slides
-
-** TODO Figure out the REPL situation
-** TODO Figure out the Editor situation
 
 * <2015-06-22 Mon 21:06> Work Log (Prasanna)
 
@@ -80,6 +80,11 @@ Cons:
 *** Embed nrepl in the scheduler itself
 
 I have the code for embedding in the
+
+
+* <2015-06-27 Sat 12:58> Work Log (Prasanna)
+
+** Added Gorilla-Repl and a startup script
 
 * TODOs ( Week of <2015-06-29 Mon>)
 
