@@ -86,6 +86,32 @@ I have the code for embedding in the
 
 ** Added Gorilla-Repl and a startup script
 
+
+* <2015-06-28 Sun 22:42> Work Log (Prasanna)
+
+** Tried initializing with Gorilla Repl
+
+[[file:./images/gorilla-repl-start]]
+
+*** Process
+
+Start the REPL from vagrant and run
+
+#+BEGIN_SRC shell
+./start-repl
+#+END_SRC
+
+Open the browser and go to http://192.168.33.10/8091/worksheet.html to start the process.
+
+*** TODO Issues with registering Framework
+
+I've been getting the following error in console:
+
+#+BEGIN_SRC text
+Ignoring framework registered message because it was sent from 'master@127.0.1.1:5050' instead of the leading master 'master@127.0.0.1:5050'
+#+END_SRC
+
+
 * TODOs ( Week of <2015-06-29 Mon>)
 
 ** TODO Setup Ubuntu 14.04 on Appleseed
