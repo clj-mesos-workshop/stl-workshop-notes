@@ -111,6 +111,9 @@ I've been getting the following error in console:
 Ignoring framework registered message because it was sent from 'master@127.0.1.1:5050' instead of the leading master 'master@127.0.0.1:5050'
 #+END_SRC
 
+*** REMINDER Crashing the JVM
+
+If you try to run the executor on the same JVM as the one running Scheduler, you may have a bad time. I crashed the JVM by trying that.
 
 * TODOs ( Week of <2015-06-29 Mon>)
 
