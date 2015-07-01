@@ -1,0 +1,61 @@
+# Using org-mode to create presentation because that's a little more fun right now
+# Using: https://github.com/yjwen/org-reveal/
+# Need to load-library ox-reveal and then run C-c C-e R R
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/2.5.0/
+
+* Introduction
+
+* Mesos
+
+** What is it?
+
+* Workshop Layout
+
+* Part 1: Getting Started
+** Getting Started with Mesos
+   Getting the development environment setup locally and on clouds/private clusters
+
+   You have thumb drives with Vagrant, VirtualBox setup.
+   Go to the directory mesos-vagrant in terminal and run
+
+   #+BEGIN_SRC shell
+   vagrant up
+   #+END_SRC
+
+* Start Gorilla Repl
+
+  #+BEGIN_SRC shell
+  vagrant ssh
+  cd /vagrant/hello-mesos && ./start-repl
+  #+END_SRC
+
+   This will start on two ports:
+
+   - 8090 -> Gorilla Repl
+   - 8091 -> nrepl endpoint if you're already familiar with the code
+
+
+* Opening the Tutorial Worksheets
+
+  Please navigate to http://192.168.33.10:8090/worksheet.html
+
+
+* Part 2: Hello Mesos!
+  Introduction to Hello Mesos: https://github.com/clj-mesos-workshop/hello-mesos
+  Implement a scheduler that prints "Hello Mesos"
+  Compile and run on the Mesos environment from Part 1
+
+* Part 3: Hello-Mesos Executor!
+  Implement an executor for Hello-Mesos
+  Task: Implement Status Update messages
+  Task: Framework Messages
+
+* Part 4: Web Interface
+  Add a web interface to Hello Mesos!
+  Task: Toggle messages based on the web interface inputs
+
+* Part 5: Rendler - putting it together
+  Rendler is a web crawling framework on Mesos https://github.com/clj-mesos-workshop/RENDLER
+  The attendees will be provided with a server with crawlable pages for Rendler
+  Task: Fill in ideas from Parts 1-3 into Rendler scaffolding
+  To think: How would you build a very big web crawler using Clojure, Mesos and lots of servers?

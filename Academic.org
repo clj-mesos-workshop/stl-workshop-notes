@@ -1,0 +1,10 @@
+* History of Mesos
+
+** Scheduling
+
+
+
+
+* Resources
+
+http://www.umbrant.com/blog/2015/mesos_omega_borg_survey.html -- Good article to get started on the overall idea of Mesos

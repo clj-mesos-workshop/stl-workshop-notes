@@ -1,5 +1,10 @@
 #+TODO: TODO REMINDER ERROR DONE
 
+* BIG LIST OF TODOs
+
+** TODO Vagrant Setup
+** TODO Downloadable + Thumbdrive setup for attendees
+
 * TODOs ( Week of <2015-06-22 Mon>)
 
 ** DONE Setup vagrant-mesos w/ Leiningen and hello-mesos
@@ -10,7 +15,7 @@
 ** DONE Figure out the Editor situation
 
 ** TODO Read and review Mesos blog post about history (http://www.umbrant.com/blog/2015/mesos_omega_borg_survey.html)
-** TODO Make first draft of slides
+** DONE Make first draft of slides (see [[file:slideshow/slideshow.org]])
 
 * <2015-06-22 Mon 21:06> Work Log (Prasanna)
 
@@ -91,7 +96,7 @@ I have the code for embedding in the
 
 ** Tried initializing with Gorilla Repl
 
-[[file:./images/gorilla-repl-start]]
+[[file:./images/gorilla-repl-start]].png
 
 *** Process
 
@@ -115,6 +120,16 @@ Ignoring framework registered message because it was sent from 'master@127.0.1.1
 
 If you try to run the executor on the same JVM as the one running Scheduler, you may have a bad time. I crashed the JVM by trying that.
 
+* <2015-06-30 Tue 21:09> Work Log (Prasanna)
+
+** Added the slideshow file
+- ox-reveal didn't quite work, but hey done with task.
+
 * TODOs ( Week of <2015-06-29 Mon>)
 
-** TODO Setup Ubuntu 14.04 on Appleseed
+** TODO Setup Ubuntu 14.04 on Appleseed (Prasanna's Desktop)
+** TODO Start creating Gorilla Repl Worksheets
+
+* TODOs (Week of <2015-07-06 Mon>)
+
+** TODO Get the Workshop content Reviewed by at least one other person
