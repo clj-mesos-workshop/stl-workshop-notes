@@ -31,8 +31,8 @@
 
    This will start on two ports:
 
-   - 8090 -> Gorilla Repl
-   - 8091 -> nrepl endpoint if you're already familiar with the code
+   - 8090 -> nrepl endpoint if you're already familiar with the code
+   - 8091 -> Gorilla Repl
 
 
 * Opening the Tutorial Worksheets

@@ -1,6 +1,53 @@
+# COMMENT Academic notes that could be used for the talk or for writing
+#+STARTUP: indent
+
 * History of Mesos
 
 ** Scheduling
+
+- Various examples of scheduling systems in High Performance Computing space.
+- Predates YARN, addresses the problem with MapReduce
+*** Two Level Scheduling
+
+- Mesos delegates the per application scheduling work to the application themselves, Mesos is responsible for resource distribution among applications and enforcing overall fairness.
+**** Resource Offers
+- Mesos periodically offers some resources to the application schedulers
+***** Difference from MapReduce
+- TaskTracker worker is source of truth in MR1 and Jobtracker chooses what to run on TaskTracker.
+- In Mesos, the resource offer comes from the Mesos Master instead.
+- They act as time-bounded leases for some resources
+**** Flexibilty for Application
+- Based on the reource offers, the app can compute how to use them. It can choose to run a portion of tasks now, wait for bigger allocation later or size tasks differently to fit what's available.
+**** Concerns
+- Long tasks Hogging Resources: Mesos kills tasks after time limit, which incentivizes using short tasks, which is good for fairness.
+- Isolation: CGroups
+- Starvation of Large tasks: It's difficult to get sole access to a node. Use minimum offer size.
+
+** Differences with HPC
+
+**** Data Locality
+
+1.  HPC Clusters are close together and don't much care about Data Locality but Data Center ones do.
+  - Link with Mesos -> with new versions adding better tagging capabilities for individual containers
+    so that they can be rack, AZ local
+**** Hardware heterogeneity
+1. Data Center hardware are distinctly different (Beowulf clusters and what not)
+2. HPC can generally be the same hardware or distinctly separate subdivisions of hardwares
+3. It gets more complicated when the datacenters are built over time where new ones get more Resources
+   and better hardware
+**** Queue Management and Scheduling
+1. In HPC, you can get away with using PBS and the likes (Condor/HTCondor is better but not as dynamic as Mesos)
+
+* Mesos vs Borg
+
+* Mesos vs Omega
+
+- In Mesos, resource offers are pessimistic or exclusive. If the resource has been offered to an app, the same resource wont be offered to another app until the offer times out. In Omega, the resource offeres are optimistic.
+- Every application is offered all available resources on the cluster and conflicts are resolved at commit time.
+- Applications are allowed to preempt lower-priority jobs and are trusted to stay within their cooperatively enforced limits on number of submitted jobs, amount of allocated resources, etc.
+- At some point, optimistic concurrency control breaks down because of a high conflict rate and the duplicated work from retries.
+
+* Notes on writing your own framework
 
 
 
@@ -8,3 +55,5 @@
 * Resources
 
 http://www.umbrant.com/blog/2015/mesos_omega_borg_survey.html -- Good article to get started on the overall idea of Mesos
+http://blog.acolyer.org/2015/05/07/large-scale-cluster-management-at-google-with-borg/ -- Cluster Management with Borg
+http://mesos.apache.org/documentation/latest/app-framework-development-guide/ -- App Framework Development guide, has notes on writing frameworks
