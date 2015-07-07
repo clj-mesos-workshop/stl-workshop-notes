@@ -24,3 +24,11 @@ message DiscoveryInfo {
   optional Labels labels = 7;
 }
 #+END_SRC
+
+
+* What do you think of Mesomatic?
+
+- We absolutely loved the presentation given by Pierre at EuroClojure https://www.youtube.com/watch?v=X-fVA5DxezE
+- It is clearly more mature than clj-mesos at this point but we'd already started building our workshop around clj-mesos.
+
+(Perhaps we can provide a sample for users)
