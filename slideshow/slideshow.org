@@ -8,7 +8,8 @@
 * Mesos
 
 ** What is it?
-
+** Version that we're using
+0.22
 * Workshop Layout
 
 * Part 1: Getting Started
@@ -37,7 +38,9 @@
 
 * Opening the Tutorial Worksheets
 
-  Please navigate to http://192.168.33.10:8090/worksheet.html
+  Please navigate to http://192.168.33.10:8091/worksheet.html?filename=ws/part-1-getting-started.clj
+
+This will open the Getting Started page
 
 
 * Part 2: Hello Mesos!

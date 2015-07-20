@@ -143,3 +143,11 @@ If you try to run the executor on the same JVM as the one running Scheduler, you
 * <2015-07-06 Mon 23:09> Work Log (Prasanna)
 
 ** Updated Academic.org from the blog post
+
+
+* TODOs (Week of <2015-07-20 Mon>
+
+* <2015-07-19 Sun 22:14> Gorilla REPL
+
+** Added instructions on how to use the REPL in Getting Started
+** Figured out how to add inline images

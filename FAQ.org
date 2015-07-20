@@ -32,3 +32,7 @@ message DiscoveryInfo {
 - It is clearly more mature than clj-mesos at this point but we'd already started building our workshop around clj-mesos.
 
 (Perhaps we can provide a sample for users)
+
+* Monitoring Mesos
+
+http://mesos.apache.org/documentation/latest/monitoring/
