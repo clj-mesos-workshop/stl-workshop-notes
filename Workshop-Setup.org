@@ -147,7 +147,18 @@ If you try to run the executor on the same JVM as the one running Scheduler, you
 
 * TODOs (Week of <2015-07-20 Mon>
 
-* <2015-07-19 Sun 22:14> Gorilla REPL
+* <2015-07-19 Sun 22:14> Work Log (Prasanna)
+** Gorilla REPL
 
 ** Added instructions on how to use the REPL in Getting Started
 ** Figured out how to add inline images
+
+* <2015-07-20 Mon 21:13> Work Log (Prasanna)
+
+** Adding Configuration for educational purposes
+
+It is configured as an atom in user namespace so that users can get a sense of the parameters available
+
+#+BEGIN_SRC clojure
+
+#+END_SRC
