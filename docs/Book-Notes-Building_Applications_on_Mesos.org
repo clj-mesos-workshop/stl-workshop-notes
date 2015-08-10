@@ -1,0 +1,36 @@
+* Chapter 1 - Introduction to Mesos
+
+Mesos is a system that allows you to harness all of the different machines in your
+computer cluster or data center and treat them as a single logical entity.
+
+With Mesos, the problem of having fixed sets of machines assigned to applications
+is no longer an issue. Instead, you can easily change which software is running on
+which machines, or even abdicate the responsibility of choosing which software runs
+on which machines to Mesos and allow Mesos to make that decision for you.
+
+In practice, it’s best to think of Mesos as serving a different purpose altogether. It
+allows you to stop focusing on individual machines, whether for developing your
+applications or for deploying them. Instead, it allows you to treat your cluster as a
+single, large group of resources.
+
+- Companies use Mesos because of the reliability, flexibility and efficiency it brings.
+
+- Mesos brokers divisions of machines between many Frameworks.
+
+** On Frameworks
+
+- Frameworks can act as applications, like Hadoop or Storm.
+- Frameworks can act as deployment systems, like Ansible, Chef.
+- Mesos coordinates and collaborates with Frameworks to allocate slices of machines
+  in the Mesos cluster towards various roles.
+
+** Mesos as Deployment System
+
+- Traditional tools like Chef, Ansible, Puppet aren't adequate for dynamically
+  changing configurations, depending on external factors.
+- You would still need a traditional configuration manager to bootstrap a Mesos cluster
+
+** Mesos as an Execution Plaform
+
+- Rather than paying for 3rd party PaaS solutions like Heroku, you can have single Mesos cluster.
+* Chapter 2 - Getting Started with Mesos
