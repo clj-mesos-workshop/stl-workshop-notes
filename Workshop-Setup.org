@@ -162,3 +162,8 @@ It is configured as an atom in user namespace so that users can get a sense of t
 #+BEGIN_SRC clojure
 
 #+END_SRC
+
+
+* <2015-08-18 Tue 07:59> Work Log (Prasanna)
+
+** Issues with private_network in Vagrant

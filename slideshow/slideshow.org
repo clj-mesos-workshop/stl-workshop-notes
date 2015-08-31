@@ -2,45 +2,63 @@
 # Using: https://github.com/yjwen/org-reveal/
 # Need to load-library ox-reveal and then run C-c C-e R R
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/2.5.0/
+#+STARTUP: indent
 
 * Introduction
+# Estimated Time: 2 minutes
+# TODO: Talk about ourselves
+** Ed Paget
+** Prasanna Gautam
+* Setup
+# Estimated Time: 30 minutes. Goal Time: 15 minuts
+# TODO: Get users setup with Vagrant USB images
+# TODO: Ensure that the setup is correct. (Run Diagnosis script)
+** Getting your Dev Environment Ready
+* Mesos: Introduction
+** Terms
+- Tasks
+- Scheduler
+- Executor
+  # TODO - Show examples of different kinds of executors with code
+- Framework
+- Driver
+- libMesos
+** Overview of How Mesos Framework works
+# TODO: Describe request flow for a Scheduler
+- Offer Model
+- FrameworkMessage
+* (go) hello-mesos
+# Ask participants to run (go) on their systems
+* (go-ha) Demo
+# How does the distributed version work?
+# TODO: Run multiple schedulers in the master
+# TODO: Kill one of them and demonstrate the new leader
 
-* Mesos
-
-** What is it?
-** Version that we're using
-0.22
-* Workshop Layout
-
+* Clojure: Introduction
+** Syntax
+- Introduction
+- Comparison with Python and Javascript
+** Why Use Clojure for writing Mesos Frameworks
+- Writing protocol buffers in other languages can be tedious
+- Just maps and Lists - Easier to explain. Concepts are the same
+** Clj-mesos
+- One we have most experience with
+- The concepts are same with mesomatic too
+* Workshop Goals
+** Single Scheduler & Executors
+** HA Scheduler & executors
+- Failover
 * Part 1: Getting Started
-** Getting Started with Mesos
-   Getting the development environment setup locally and on clouds/private clusters
+** Getting Started with mesos-framework
+- Run =lein new mesos-framework= to get the scaffolding in place
+** Run the REPL
+- Run =lein repl=
+- If you want to connect using CIDER, you may want to run
+** Responding to the Mesos callbacks
+- resourceOffers
+- frameworkMessage
+# TODO: Explain "Best Effort". Bookkeeping tasks that may not be critically time sensitive.
 
-   You have thumb drives with Vagrant, VirtualBox setup.
-   Go to the directory mesos-vagrant in terminal and run
-
-   #+BEGIN_SRC shell
-   vagrant up
-   #+END_SRC
-
-* Start Gorilla Repl
-
-  #+BEGIN_SRC shell
-  vagrant ssh
-  cd /vagrant/hello-mesos && ./start-repl
-  #+END_SRC
-
-   This will start on two ports:
-
-   - 8090 -> nrepl endpoint if you're already familiar with the code
-   - 8091 -> Gorilla Repl
-
-
-* Opening the Tutorial Worksheets
-
-  Please navigate to http://192.168.33.10:8091/worksheet.html?filename=ws/part-1-getting-started.clj
-
-This will open the Getting Started page
 
 
 * Part 2: Hello Mesos!
