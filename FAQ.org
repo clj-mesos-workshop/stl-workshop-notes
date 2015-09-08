@@ -36,3 +36,43 @@ message DiscoveryInfo {
 * Monitoring Mesos
 
 http://mesos.apache.org/documentation/latest/monitoring/
+* hello-mesos related Notes
+** Adding more executors
+In dev/user.clj
+
+Change the number of executors to start in the expression
+
+#+BEGIN_SRC clojure
+(sys/scheduler-system "zk://10.10.4.2:2181/mesos"
+                       1
+                      sched/jar-task-info))
+#+END_SRC
+
+Save and run in REPL
+#+BEGIN_SRC clojure
+(reset)
+#+END_SRC
+
+** Adding more Slaves
+
+There are two ways to do this, either run the =vagrant up= command
+with environment variable =MESOS_SLAVES= equal to the desired number
+of slaves. Or, edit the Vagrantfile to read
+
+#+BEGIN_SRC ruby
+vagrant_slaves = ENV.fetch('MESOS_SLAVES', 3).to_i
+#+END_SRC
+
+
+
+** What happens when you kill a slave?
+
+- You get a status update message in master that looks as follows
+
+#+BEGIN_SRC clojure
+{:task-id 5350fd2f-48b6-4ccb-b9ff-627bb2bacc6d, :state :task-lost,
+:message Slave 10.10.4.11 disconnected, :slave-id 20150825-153127-33819146-5050-1218-S1,
+:timestamp 1.441643388616899E9, :source :source-master, :reason :reason-slave-disconnected}
+#+END_SRC
+
+You can choose to then execute the slave
