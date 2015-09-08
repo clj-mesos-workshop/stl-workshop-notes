@@ -1,0 +1,6 @@
+** Bay Area Clojure User Group Talk (Sept 17, 2015)
+
+Title: Building Mesos Frameworks with Clojure
+
+Building a fast, reliable distributed system that provides maximum utilization of computing resources involves careful understanding of scheduler behavior, fault-tolerance tradeoffs, and when and where jobs are supposed to be run. Thankfully, this has become easier to understand with the introduction of Mesos in the data center. Multiple Mesos frameworks, which handle the scheduling and execution of application tasks, can run on the same cluster to get the fullest utilization of hardware, and in many cases decide where an application should run for lowest latency and highest reliability. Writing your own framework can be daunting yet rewarding
+experience. The complexity of writing such a framework can be expressed often at high level enough that Clojure or Scala can be a great tool to write it in. This talk will present a template for using Clojure to build a Scheduler for mesos and demystify the workings of the existing frameworks available for mesos.
