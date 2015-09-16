@@ -76,3 +76,16 @@ vagrant_slaves = ENV.fetch('MESOS_SLAVES', 3).to_i
 #+END_SRC
 
 You can choose to then execute the slave
+** Cannot reach the Mesos URL on host machine
+
+- If you cannot reach the http://10.10.4.2:5050 because of some network
+configuration issue in host machine, you can still use the
+ssh connectivity to tunnel through.
+
+Here are the steps
+
+1. Run bin/update-ssh-config.sh
+  This will create the necessary vagrant configurations to ssh directly
+2. Create a SOCKS proxy
+  ssh -D 8081 vagrant@master
+3. Use Firefox to connect to the SOCKS proxy
