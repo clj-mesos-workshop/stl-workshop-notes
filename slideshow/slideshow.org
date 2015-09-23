@@ -53,13 +53,11 @@
 - Run =lein new mesos-framework= to get the scaffolding in place
 ** Run the REPL
 - Run =lein repl=
-- If you want to connect using CIDER, you may want to run
+- If you want to connect using CIDER, you may want to run `lein repl :headless :host 0.0.0.0 :port 8082`
 ** Responding to the Mesos callbacks
 - resourceOffers
 - frameworkMessage
 # TODO: Explain "Best Effort". Bookkeeping tasks that may not be critically time sensitive.
-
-
 
 * Part 2: Hello Mesos!
   Introduction to Hello Mesos: https://github.com/clj-mesos-workshop/hello-mesos
@@ -69,13 +67,24 @@
 * Part 3: Hello-Mesos Executor!
   Implement an executor for Hello-Mesos
   Task: Implement Status Update messages
-  Task: Framework Messages
+  
+* Part 4: Failover
+  Implement Failover using Curator Leader Election
+  Task: Use registered callback to save the Framework-Id
+  Task: Use SchedulerDriver.reconcileTasks to get the current state of the cluster
 
-* Part 4: Web Interface
+* Part 5: Web Interface
   Add a web interface to Hello Mesos!
-  Task: Toggle messages based on the web interface inputs
+  Task: Scale Number of Executors Up and Down
+  
+* Part 6: Testing
+  Add some tests for your Scheduler
+  Task: Write a dummy reified SchedulerDriver to test Scheduler Callbacks
+  
+* Part 7: Run the framework in Marathon (Do you want to do this? -- Ed)
+  Since Marathon is running on the vagrant image, we could have attendees upload an App description and run the scheduler that way. 
 
-* Part 5: Rendler - putting it together
+* Part 5: Rendler - putting it together (Don't think we're going to do this? -- Ed)
   Rendler is a web crawling framework on Mesos https://github.com/clj-mesos-workshop/RENDLER
   The attendees will be provided with a server with crawlable pages for Rendler
   Task: Fill in ideas from Parts 1-3 into Rendler scaffolding
