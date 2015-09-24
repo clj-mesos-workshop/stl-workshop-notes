@@ -1,0 +1,36 @@
+* Setup Process
+** Install Virtualbox
+/Volumes/STL15MESOS/virtualbox
+
+** Install Vagrant
+/Volumes/STL15MESOS/vagrant/
+
+** Add the box
+cd /Volumes/STL15MESOS/vagrant/boxes
+vagrant box add edpaget-mesos-virtualbox.box --name edpaget/mesos
+
+** Get the Code
+mkdir ~/StrangeLoop2015 && cd ~/StrangeLoop2015
+cp -r /Volumes/STL15MESOS/code ~/StrangeLoop2015
+cd code/hello-mesos
+vagrant up
+bin/diagnose-vagrant-setup.sh
+vagrant ssh-config
+bin/update-ssh-config.sh
+
+* Web UI
+
+http://10.10.4.2:5050
+
+* SSH Tunnel
+
+ssh -D 8081 vagrant@master
+
+* Emacs
+
+open ~/StrangeLoop2015/code/hello-mesos/dev/user.clj
+cider to vagrant@master
+
+** Cider
+
+(go)
